@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/home.dart';
 
 void main() {
   runApp(const Login());
@@ -12,7 +13,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          margin: EdgeInsets.only(left: 20, right: 20),
+          margin: const EdgeInsets.only(left: 20, right: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -41,8 +42,17 @@ class Login extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: Text("Login", style: TextStyle(color: Colors.white)), style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.blue)),
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return Home();
+                  }));
+                },
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.blue)),
+                child:
+                    const Text("Login", style: TextStyle(color: Colors.white)),
               )
             ],
           ),
