@@ -48,8 +48,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Padding(
-            padding:
-                const EdgeInsets.only(left: 15),
+            padding: const EdgeInsets.only(left: 15),
             child: Align(
               alignment: Alignment.centerLeft,
               child: const Text(
@@ -58,6 +57,42 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
+          Row(
+            mainAxisAlignment:
+                MainAxisAlignment.center, // Center the Row horizontally
+            children: [
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1, // Set aspect ratio to make it a square
+                  child: Container(
+                    margin: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                        image: AssetImage("assets/promo1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1, // Set aspect ratio to make it a square
+                  child: Container(
+                    margin: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                        image: AssetImage("assets/promo2.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
