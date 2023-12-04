@@ -34,23 +34,30 @@ class _HomeState extends State<Home> {
       ),
       body: Column(
         children: [
-          Center(
+          AspectRatio(
+            aspectRatio: 16 / 9,
             child: Container(
-              margin: const EdgeInsets.fromLTRB(10, 10, 10, 20),
-              width: 350,
-              height: 100,
-              color: Colors.red,
+              margin: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage("assets/banner.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ),
-          const Align(
+          Padding(
+            padding:
+                const EdgeInsets.only(left: 15),
+            child: Align(
               alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Text(
-                  "Exclusive Promo",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
-                ),
-              )),
+              child: const Text(
+                "Exclusive Promo",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              ),
+            ),
+          ),
         ],
       ),
     );

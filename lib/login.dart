@@ -45,7 +45,7 @@ class Login extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return Home();
+                    return const Home();
                   }));
                 },
                 style: ButtonStyle(
