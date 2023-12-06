@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/payment.dart';
+import 'package:my_flutter_app/profile.dart';
 
 void main() {
   runApp(const Home());
@@ -27,7 +28,11 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF006041),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Profile();
+                }));
+              },
               icon: const Icon(
                 Icons.person_rounded,
                 color: Colors.white,
