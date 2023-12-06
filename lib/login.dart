@@ -11,21 +11,30 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFf4f2ef),
       body: Center(
         child: Container(
           margin: const EdgeInsets.only(left: 20, right: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 20),
+                child: Text(
+                  "Welcome to J Coffee Shop",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF006041)),
+                ),
+              ),
               TextField(
                 decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.person),
                     hintText: "Username",
                     hintStyle: const TextStyle(color: Colors.grey),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(
-                            5)) // variation InputBorder.none
-                    ),
+                        borderRadius: BorderRadius.circular(5))),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -35,25 +44,26 @@ class Login extends StatelessWidget {
                       hintText: "Password",
                       hintStyle: const TextStyle(color: Colors.grey),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(
-                              5)) // variation InputBorder.none
-                      ),
+                          borderRadius: BorderRadius.circular(5))),
                   obscureText: true,
                 ),
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const Home();
                   }));
                 },
                 style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.blue)),
-                child:
-                    const Text("Login", style: TextStyle(color: Colors.white)),
-              )
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                    Color(0xFF006041),
+                  ),
+                ),
+                child: const Text(
+                  "Login",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ],
           ),
         ),

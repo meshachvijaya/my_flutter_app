@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/payment.dart';
 
 void main() {
   runApp(const Home());
@@ -20,9 +21,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(
           "Welcome " + yourName,
-          style: const TextStyle(color: Colors.white, fontSize: 16),
+          style: const TextStyle(
+              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xFF006041),
         actions: [
           IconButton(
               onPressed: () {},
@@ -58,12 +60,11 @@ class _HomeState extends State<Home> {
             ),
           ),
           Row(
-            mainAxisAlignment:
-                MainAxisAlignment.center, // Center the Row horizontally
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 child: AspectRatio(
-                  aspectRatio: 1, // Set aspect ratio to make it a square
+                  aspectRatio: 1,
                   child: Container(
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -78,7 +79,7 @@ class _HomeState extends State<Home> {
               ),
               Expanded(
                 child: AspectRatio(
-                  aspectRatio: 1, // Set aspect ratio to make it a square
+                  aspectRatio: 1,
                   child: Container(
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -92,7 +93,93 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ],
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                "Your Voucher",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              ),
+            ),
+          ),
+          Stack(
+            children: [
+              Positioned.fill(
+                child: Container(
+                  margin: EdgeInsets.only(left: 15, right: 15, top: 10),
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 2,
+                        blurRadius: 4,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 15, top: 10),
+                      width: 40,
+                      height: 40,
+                      child: Image(
+                        image: AssetImage("assets/wa.png"),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 10, top: 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Customer Service(Chat Only)",
+                            style: TextStyle(fontSize: 12),
+                          ),
+                          Text(
+                            "0822 9733 7639",
+                            style: TextStyle(
+                              color: Color(0xFF006041),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 20),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Payment();
+                }));
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  Color(0xFF006041),
+                ),
+              ),
+              child: const Text(
+                "Pay with QRIS",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
         ],
       ),
     );
