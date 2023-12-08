@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/home.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -45,20 +47,85 @@ class Profile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 10),
-                  DecoratedBox(
-                    decoration: BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(color: Colors.grey, width: 0.5),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(bottom: 10),
+                      width: screenWidth,
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
                       ),
+                      child: Text("Alamat"),
                     ),
-                    child: Text("Alamat"),
                   ),
                   SizedBox(height: 20),
-                  Text("Pembayaran"),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(bottom: 10),
+                      width: screenWidth,
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
+                      ),
+                      child: Text("Pembayaran"),
+                    ),
+                  ),
                   SizedBox(height: 20),
-                  Text("Pusat Bantuan"),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(bottom: 10),
+                      width: screenWidth,
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
+                      ),
+                      child: Text("Pusat Bantuan"),
+                    ),
+                  ),
                   SizedBox(height: 20),
-                  Text("Pengaturan"),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(bottom: 10),
+                      width: screenWidth,
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
+                      ),
+                      child: Text("Pengaturan"),
+                    ),
+                  ),
                 ],
               ),
             ),
