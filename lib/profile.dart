@@ -10,7 +10,7 @@ class Profile extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Profile",
           style: TextStyle(
               color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
@@ -34,8 +34,8 @@ class Profile extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 10),
-              child: Center(
+              margin: const EdgeInsets.only(top: 10),
+              child: const Center(
                 child: Text(
                   "Hello Joshua",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
@@ -43,20 +43,20 @@ class Profile extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
+              margin: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Alamat()));
                     },
                     child: Container(
-                      padding: EdgeInsets.only(bottom: 10),
+                      padding: const EdgeInsets.only(bottom: 10),
                       width: screenWidth,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
                             color: Colors.grey,
@@ -64,19 +64,19 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: Text("Alamat"),
+                      child: const Text("Alamat"),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Home()));
                     },
                     child: Container(
-                      padding: EdgeInsets.only(bottom: 10),
+                      padding: const EdgeInsets.only(bottom: 10),
                       width: screenWidth,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
                             color: Colors.grey,
@@ -84,19 +84,19 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: Text("Pembayaran"),
+                      child: const Text("Pembayaran"),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Home()));
                     },
                     child: Container(
-                      padding: EdgeInsets.only(bottom: 10),
+                      padding: const EdgeInsets.only(bottom: 10),
                       width: screenWidth,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
                             color: Colors.grey,
@@ -104,19 +104,19 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: Text("Pusat Bantuan"),
+                      child: const Text("Pusat Bantuan"),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Home()));
                     },
                     child: Container(
-                      padding: EdgeInsets.only(bottom: 10),
+                      padding: const EdgeInsets.only(bottom: 10),
                       width: screenWidth,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
                             color: Colors.grey,
@@ -124,7 +124,7 @@ class Profile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: Text("Pengaturan"),
+                      child: const Text("Pengaturan"),
                     ),
                   ),
                 ],

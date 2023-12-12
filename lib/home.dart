@@ -21,11 +21,11 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Welcome " + yourName,
+          "Welcome $yourName",
           style: const TextStyle(
               color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Color(0xFF006041),
+        backgroundColor: const Color(0xFF006041),
         actions: [
           IconButton(
               onPressed: () {
@@ -47,18 +47,18 @@ class _HomeState extends State<Home> {
               margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage("assets/banner.png"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
             child: Align(
               alignment: Alignment.centerLeft,
-              child: const Text(
+              child: Text(
                 "Exclusive Promo",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage("assets/promo1.jpg"),
                         fit: BoxFit.cover,
                       ),
@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                     margin: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage("assets/promo2.jpg"),
                         fit: BoxFit.cover,
                       ),
@@ -99,11 +99,11 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
             child: Align(
               alignment: Alignment.centerLeft,
-              child: const Text(
+              child: Text(
                 "Your Voucher",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
@@ -113,7 +113,7 @@ class _HomeState extends State<Home> {
             children: [
               Positioned.fill(
                 child: Container(
-                  margin: EdgeInsets.only(left: 15, right: 15, top: 10),
+                  margin: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   width: double.infinity,
                   height: 50,
                   decoration: BoxDecoration(
@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 2,
                         blurRadius: 4,
-                        offset: Offset(0, 3),
+                        offset: const Offset(0, 3),
                       ),
                     ],
                     borderRadius: BorderRadius.circular(8),
@@ -131,20 +131,20 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 15, top: 10),
+                      margin: const EdgeInsets.only(left: 15, top: 10),
                       width: 40,
                       height: 40,
-                      child: Image(
+                      child: const Image(
                         image: AssetImage("assets/wa.png"),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 10, top: 10),
-                      child: Column(
+                      margin: const EdgeInsets.only(left: 10, top: 10),
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -167,7 +167,7 @@ class _HomeState extends State<Home> {
             ],
           ),
           Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: const EdgeInsets.only(top: 20),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -176,7 +176,7 @@ class _HomeState extends State<Home> {
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
-                  Color(0xFF006041),
+                  const Color(0xFF006041),
                 ),
               ),
               child: const Text(

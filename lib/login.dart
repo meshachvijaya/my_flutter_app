@@ -11,7 +11,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFf4f2ef),
+      backgroundColor: const Color(0xFFf4f2ef),
       body: Center(
         child: Container(
           margin: const EdgeInsets.only(left: 20, right: 20),
@@ -19,8 +19,8 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(bottom: 20),
-                child: Text(
+                margin: const EdgeInsets.only(bottom: 20),
+                child: const Text(
                   "Welcome to J Coffee Shop",
                   style: TextStyle(
                       fontSize: 20,
@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                 },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all<Color>(
-                    Color(0xFF006041),
+                    const Color(0xFF006041),
                   ),
                 ),
                 child: const Text(

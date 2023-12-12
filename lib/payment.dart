@@ -15,7 +15,7 @@ class Payment extends StatelessWidget {
         child: QrImageView(
           version: 6,
           errorCorrectionLevel: QrErrorCorrectLevel.M,
-          padding: EdgeInsets.all(30),
+          padding: const EdgeInsets.all(30),
           size: 300,
           data: "https://netafel.com",
         ),
