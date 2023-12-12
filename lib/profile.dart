@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/alamat.dart';
 import 'package:my_flutter_app/home.dart';
 
 class Profile extends StatelessWidget {
@@ -50,7 +51,7 @@ class Profile extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
+                          MaterialPageRoute(builder: (context) => Alamat()));
                     },
                     child: Container(
                       padding: EdgeInsets.only(bottom: 10),
