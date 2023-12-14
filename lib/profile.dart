@@ -15,11 +15,11 @@ class Profile extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Color(0xFF006041),
+        backgroundColor: const Color(0xFF006041),
         centerTitle: true,
       ),
       body: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: const EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -51,7 +51,7 @@ class Profile extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Alamat()));
+                          MaterialPageRoute(builder: (context) => const Alamat()));
                     },
                     child: Container(
                       padding: const EdgeInsets.only(bottom: 10),
@@ -71,7 +71,7 @@ class Profile extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
+                          MaterialPageRoute(builder: (context) => const Home()));
                     },
                     child: Container(
                       padding: const EdgeInsets.only(bottom: 10),
@@ -91,7 +91,7 @@ class Profile extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
+                          MaterialPageRoute(builder: (context) => const Home()));
                     },
                     child: Container(
                       padding: const EdgeInsets.only(bottom: 10),
@@ -111,7 +111,7 @@ class Profile extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Home()));
+                          MaterialPageRoute(builder: (context) => const Home()));
                     },
                     child: Container(
                       padding: const EdgeInsets.only(bottom: 10),

@@ -12,7 +12,7 @@ class Alamat extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Color(0xFF006041),
+        backgroundColor: const Color(0xFF006041),
         centerTitle: true,
       ),
       body: ListView(

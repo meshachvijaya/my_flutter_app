@@ -176,7 +176,7 @@ class _HomeState extends State<Home> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return Beverages();
+                      return const Beverages();
                     }));
                   },
                   style: ButtonStyle(
