@@ -39,7 +39,7 @@ class Alamat extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
-                color: Colors.grey,
+                // color: Colors.grey,
                 child: Column(
                   children: [
                     Row(
@@ -79,7 +79,7 @@ class Alamat extends StatelessWidget {
                     const Row(
                       children: [
                         Text("1.32 km"),
-                        Text("dari store"),
+                        Text(" dari store"),
                       ],
                     ),
                     const SizedBox(height: 10),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/beverages.dart';
 import 'package:my_flutter_app/payment.dart';
 import 'package:my_flutter_app/profile.dart';
 
@@ -166,24 +167,50 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Container(
-            margin: const EdgeInsets.only(top: 20),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const Payment();
-                }));
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                  const Color(0xFF006041),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 20, right: 10),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Beverages();
+                    }));
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      const Color(0xFF006041),
+                    ),
+                  ),
+                  child: const Text(
+                    "Select Beverages",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
-              child: const Text(
-                "Pay with QRIS",
-                style: TextStyle(color: Colors.white),
+              Container(
+                margin: const EdgeInsets.only(top: 20, left: 10),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const Payment();
+                    }));
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      const Color(0xFF006041),
+                    ),
+                  ),
+                  child: const Text(
+                    "Pay with QRIS",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),
